@@ -40,6 +40,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Models\DeliveryNote.cs" />
     <Compile Include="Models\DocumentBase.cs" />
     <Compile Include="Models\Invoice.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
