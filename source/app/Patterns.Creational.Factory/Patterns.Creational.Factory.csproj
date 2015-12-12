@@ -41,11 +41,20 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DeliveryNoteCreator.cs" />
+    <Compile Include="DocumentCreatorBase.cs" />
+    <Compile Include="InvoiceCreator.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Patterns.Core\Patterns.Core.csproj">
+      <Project>{D4E0329D-180C-4CC7-8F9F-4E01626AF359}</Project>
+      <Name>Patterns.Core</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

@@ -31,20 +31,4 @@ namespace Patterns.Creational.Factory
 
         
     }
-
-    internal class InvoiceCreator : DocumentCreatorBase
-    {
-        public override DocumentBase Create()
-        {
-            return new DeliveryNote(GenerateDocumentNumber());
-        }
-    }
-
-    internal class DeliveryNoteCreator : DocumentCreatorBase
-    {
-        public override DocumentBase Create()
-        {
-            return new DeliveryNote(GenerateDocumentNumber());
-        }
-    }
 }
