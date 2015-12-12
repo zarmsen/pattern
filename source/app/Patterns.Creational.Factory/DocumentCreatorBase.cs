@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Runtime.Remoting.Messaging;
 
 using Patterns.Core.Models;
 
@@ -24,11 +23,9 @@ namespace Patterns.Creational.Factory
             return random.Next(0, 10);
         }
 
-        private bool IsValid(DocumentBase document)
+        public virtual bool IsValid(DocumentBase document)
         {
             return document.Number == 0 || document.Number > 0;
         }
-
-        
     }
 }
