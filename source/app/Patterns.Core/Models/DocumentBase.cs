@@ -2,10 +2,13 @@
 {
     public abstract class DocumentBase
     {
+        public int Number { get; private set; }
+
         public string Name { get; private set; }
 
-        public DocumentBase(string name)
+        public DocumentBase(int number, string name)
         {
+            Number = number;
             Name = name;
         }
     }

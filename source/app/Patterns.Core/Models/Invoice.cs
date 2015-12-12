@@ -2,6 +2,6 @@
 {
     public class Invoice : DocumentBase
     {
-        public Invoice(): base("Document Invoice") {}
+        public Invoice(int number): base(number, "Document Invoice") {}
     }
 }
