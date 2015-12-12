@@ -12,7 +12,7 @@ namespace Patterns.Creational.Factory
         public void Validate()
         {
             var document = Create();
-            if (IsNotValid(document))
+            if (IsValid(document) == false)
             {
                 throw new InvalidOperationException("There is not a valid document found.");
             }
@@ -24,7 +24,7 @@ namespace Patterns.Creational.Factory
             return random.Next(0, 10);
         }
 
-        private bool IsNotValid(DocumentBase document)
+        private bool IsValid(DocumentBase document)
         {
             return document.Number == 0 || document.Number > 0;
         }
