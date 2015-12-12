@@ -1,7 +1,37 @@
-﻿namespace Patterns.Creational.Factory
+﻿using System;
+using System.Collections.Generic;
+
+using Patterns.Core.Models;
+
+namespace Patterns.Creational.Factory
 {
     internal class Program
     {
-        private static void Main(string[] args) {}
+        private static void Main(string[] args)
+        {
+            do
+            {
+                var creators = new List<DocumentCreatorBase> { new DeliveryNoteCreator(), new InvoiceCreator()};
+
+                foreach (var creator in creators)
+                {
+
+                    try
+                    {
+                        creator.Validate();
+                    }
+                    catch (InvalidOperationException exception)
+                    {
+                        
+                       Console.WriteLine(exception.Message);
+                    }
+                
+
+                   
+                }
+            }
+            while (Console.ReadLine() != "C");
+
+        }
     }
 }
