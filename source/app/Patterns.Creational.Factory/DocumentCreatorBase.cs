@@ -13,13 +13,15 @@ namespace Patterns.Creational.Factory
             var document = Create();
             if (IsValid(document) == false)
             {
-                throw new InvalidOperationException("There is not a valid document found.");
+                throw new InvalidOperationException(string.Format("The number '{0}' is not valid for document '{1}'", document.Number, document));
             }
+
+            Console.WriteLine(document.Message);
         }
 
         protected int GenerateDocumentNumber()
         {
-            var random = new Random();
+            var random = new Random(10);
             return random.Next(0, 10);
         }
 
@@ -27,5 +29,6 @@ namespace Patterns.Creational.Factory
         {
             return document.Number == 0 || document.Number > 0;
         }
+
     }
 }
