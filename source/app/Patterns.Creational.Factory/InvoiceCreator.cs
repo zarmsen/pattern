@@ -6,7 +6,7 @@ namespace Patterns.Creational.Factory
     {
         public override DocumentBase Create()
         {
-            return new DeliveryNote(GenerateDocumentNumber());
+            return new Invoice(GenerateDocumentNumber());
         }
     }
 }
