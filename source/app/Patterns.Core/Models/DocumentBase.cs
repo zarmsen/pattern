@@ -2,12 +2,13 @@
 {
     public abstract class DocumentBase
     {
-        public int Number { get; private set; }
-
         public DocumentBase(int number)
         {
             Number = number;
-           
         }
+
+        public int Number { get; }
+
+        public string Message { get { return string.Format("Found document '{0}' with number {1}", ToString(), Number); } }
     }
 }
