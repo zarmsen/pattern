@@ -4,5 +4,10 @@
     {
         public PartialPaymentInvoice(int number)
             : base(number) {}
+
+        public override bool IsValid()
+        {
+            return Number > 8;
+        }
     }
 }

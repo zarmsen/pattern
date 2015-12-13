@@ -11,7 +11,7 @@ namespace Patterns.Creational.Factory
         public void Validate()
         {
             var document = Create();
-            if (IsValid(document) == false)
+            if (!document.IsValid())
             {
                 throw new InvalidOperationException(string.Format("The number '{0}' is not valid for document '{1}'", document.Number, document));
             }
@@ -25,10 +25,6 @@ namespace Patterns.Creational.Factory
             return random.Next(0, 10);
         }
 
-        public virtual bool IsValid(DocumentBase document)
-        {
-            return document.Number == 0 || document.Number > 0;
-        }
 
     }
 }

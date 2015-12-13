@@ -8,10 +8,5 @@ namespace Patterns.Creational.Factory
         {
             return new DeliveryNote(GenerateDocumentNumber());
         }
-
-        public override bool IsValid(DocumentBase document)
-        {
-            return base.IsValid(document) && document.Number < 5;
-        }
     }
 }

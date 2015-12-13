@@ -4,5 +4,10 @@ namespace Patterns.Core.Models
     {
         public DeliveryNote(int number)
             : base(number) {}
+
+        public override bool IsValid()
+        {
+            return Number < 5;
+        }
     }
 }
