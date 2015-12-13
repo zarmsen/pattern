@@ -2,11 +2,9 @@
 
 namespace Patterns.Creational.Factory
 {
-    internal class InvoiceCreator : DocumentCreatorBase
+    internal class InvoiceCreator : InvoiceCreatorBase
     {
-        public override DocumentBase Create()
-        {
-            return new Invoice(GenerateDocumentNumber());
-        }
+        public InvoiceCreator(InvoiceType typeOfInvoice)
+            : base(typeOfInvoice) {}
     }
 }

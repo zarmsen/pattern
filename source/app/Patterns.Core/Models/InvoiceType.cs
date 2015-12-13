@@ -4,6 +4,6 @@
     {
         PartialPayment,
 
-        Perfomal
+        Performa
     }
 }

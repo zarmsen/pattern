@@ -11,11 +11,16 @@ namespace Patterns.Creational.Factory
         {
             do
             {
-                var creators = new List<DocumentCreatorBase> { new DeliveryNoteCreator(), new InvoiceCreator()};
+                var creators = new List<DocumentCreatorBase>
+                {
+                    new DeliveryNoteCreator(),
+                    new InvoiceCreator(InvoiceType.PartialPayment),
+                    new InvoiceCreator(InvoiceType.Performa)
+                };
+                
 
                 foreach (var creator in creators)
                 {
-
                     try
                     {
                         creator.Validate();
@@ -25,9 +30,6 @@ namespace Patterns.Creational.Factory
                         
                        Console.WriteLine(exception.Message);
                     }
-                
-
-                   
                 }
             }
             while (Console.ReadLine() != "C");
