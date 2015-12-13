@@ -13,9 +13,9 @@ namespace Patterns.Creational.Factory
             {
                 var creators = new List<DocumentCreatorBase>
                 {
-                    new DeliveryNoteCreator(),
-                    new InvoiceCreator(InvoiceType.PartialPayment),
-                    new InvoiceCreator(InvoiceType.Performa)
+                   DeliveryNoteCreator.Factory
+                    , new InvoiceCreator(InvoiceType.PartialPayment)
+                    , new InvoiceCreator(InvoiceType.Performa)
                 };
                 
 
