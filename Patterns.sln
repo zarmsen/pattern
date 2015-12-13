@@ -11,6 +11,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Common", "Common", "{4FB3FA
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Patterns.Core", "source\app\Patterns.Core\Patterns.Core.csproj", "{D4E0329D-180C-4CC7-8F9F-4E01626AF359}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Patterns.Creational.Singleton", "source\app\Patterns.Creational.Singleton\Patterns.Creational.Singleton.csproj", "{DE938124-DE6D-49C8-97AF-11F8355A6B41}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -25,6 +27,10 @@ Global
 		{D4E0329D-180C-4CC7-8F9F-4E01626AF359}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D4E0329D-180C-4CC7-8F9F-4E01626AF359}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D4E0329D-180C-4CC7-8F9F-4E01626AF359}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DE938124-DE6D-49C8-97AF-11F8355A6B41}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DE938124-DE6D-49C8-97AF-11F8355A6B41}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DE938124-DE6D-49C8-97AF-11F8355A6B41}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DE938124-DE6D-49C8-97AF-11F8355A6B41}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -32,5 +38,6 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{CF0AE58E-86B2-46B4-A34F-FB92B76DCD37} = {3C25E528-74FB-4E06-B175-2AB845228449}
 		{D4E0329D-180C-4CC7-8F9F-4E01626AF359} = {4FB3FAAD-5E65-4A76-9483-D255A0A5B86E}
+		{DE938124-DE6D-49C8-97AF-11F8355A6B41} = {3C25E528-74FB-4E06-B175-2AB845228449}
 	EndGlobalSection
 EndGlobal
