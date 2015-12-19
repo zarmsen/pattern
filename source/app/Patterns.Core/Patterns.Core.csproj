@@ -40,6 +40,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DbConnection.cs" />
     <Compile Include="Enums\ConfigKey.cs" />
     <Compile Include="Models\DeliveryNote.cs" />
     <Compile Include="Models\DocumentBase.cs" />
