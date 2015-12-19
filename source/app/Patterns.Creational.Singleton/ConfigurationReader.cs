@@ -6,8 +6,6 @@ namespace Patterns.Creational.Singleton
     {
         private ConfigurationReader() {}
 
-        /// <summary>
-        /// </summary>
         private static ConfigurationReader _instance;
 
         private static readonly object lockObject = new object();
