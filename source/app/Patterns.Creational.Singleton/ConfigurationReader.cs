@@ -1,19 +1,27 @@
-﻿using System;
-using System.Configuration;
+﻿using System.Configuration;
 
 namespace Patterns.Creational.Singleton
 {
     internal sealed class ConfigurationReader
     {
+        private ConfigurationReader() {}
+
         /// <summary>
         /// </summary>
-        private readonly Lazy<ConfigurationReader>  _instance = new Lazy<ConfigurationReader>();
+        private static ConfigurationReader _instance;
 
-        private ConfigurationReader()
-        {  
+        private static readonly object lockObject = new object();
+
+        public static ConfigurationReader Instance
+        {
+            get
+            {
+                lock(lockObject)
+                {
+                    return _instance ?? (_instance = new ConfigurationReader());
+                }
+            }
         }
-
-        public ConfigurationReader Instance => _instance.Value;
 
         public string Read(ConfigKey key)
         {
