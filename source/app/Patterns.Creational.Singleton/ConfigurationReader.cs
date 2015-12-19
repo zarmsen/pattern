@@ -1,5 +1,7 @@
 ﻿using System.Configuration;
 
+using Patterns.Core.Enums;
+
 namespace Patterns.Creational.Singleton
 {
     internal sealed class ConfigurationReader
