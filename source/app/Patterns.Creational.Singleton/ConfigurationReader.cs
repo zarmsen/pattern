@@ -1,7 +1,17 @@
-﻿namespace Patterns.Creational.Singleton
+﻿using System;
+
+namespace Patterns.Creational.Singleton
 {
-    internal class ConfigurationReader
+    internal sealed class ConfigurationReader
     {
-        
+        /// <summary>
+        /// </summary>
+        private readonly Lazy<ConfigurationReader>  _instance = new Lazy<ConfigurationReader>();
+
+        private ConfigurationReader()
+        {  
+        }
+
+        public ConfigurationReader Instance => _instance.Value;
     }
 }
