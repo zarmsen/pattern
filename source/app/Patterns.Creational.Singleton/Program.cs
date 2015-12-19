@@ -10,6 +10,12 @@ namespace Patterns.Creational.Singleton
     {
         static void Main(string[] args)
         {
+
+
+            Console.WriteLine( ConfigurationReader.Instance.Read(ConfigKey.Hello));
+            Console.WriteLine( ConfigurationReader.Instance.Read(ConfigKey.Singleton));
+            Console.ReadKey();
+
         }
     }
 }
