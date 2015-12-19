@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Configuration;
 
 namespace Patterns.Creational.Singleton
 {
@@ -13,5 +14,10 @@ namespace Patterns.Creational.Singleton
         }
 
         public ConfigurationReader Instance => _instance.Value;
+
+        public string Read(ConfigKey key)
+        {
+            return ConfigurationManager.AppSettings[key.ToString()];
+        }
     }
 }
