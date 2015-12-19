@@ -31,6 +31,11 @@ namespace Patterns.Core
             return string.Equals(Connection, other.Connection);
         }
 
+        public void Open()
+        {
+            Console.WriteLine("{0}is open!", this);
+        }
+
         /// <summary>
         ///     Returns a string that represents the current object.
         /// </summary>
