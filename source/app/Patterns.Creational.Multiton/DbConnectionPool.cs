@@ -9,14 +9,14 @@ namespace Patterns.Creational.Multiton
         private DbConnectionPool() {}
 
         private static readonly Dictionary<int, DbConnection> _instances = new Dictionary<int, DbConnection>();
-
+        
         private static DbConnectionPool _instance;
 
         public static DbConnectionPool Instance
         {
             get
             {
-                lock(_instance)
+                lock(_instances)
                 {
                     return _instance ?? (_instance = new DbConnectionPool());
                 }
