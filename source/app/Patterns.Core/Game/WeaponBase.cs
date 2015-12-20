@@ -8,7 +8,7 @@ namespace Patterns.Core.Game
 
         public int Effect { get; private set; }
 
-        public WeaponBase(string name, int effect)
+        protected WeaponBase(string name, int effect)
         {
             Name = name;
             Effect = effect;
