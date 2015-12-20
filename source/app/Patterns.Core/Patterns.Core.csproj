@@ -42,13 +42,13 @@
   <ItemGroup>
     <Compile Include="DbConnection.cs" />
     <Compile Include="Enums\ConfigKey.cs" />
+    <Compile Include="Game\WeaponBase.cs" />
     <Compile Include="Models\DeliveryNote.cs" />
     <Compile Include="Models\DocumentBase.cs" />
     <Compile Include="Models\Invoice.cs" />
     <Compile Include="Models\InvoiceType.cs" />
     <Compile Include="Models\PartialPaymentInvoice.cs" />
     <Compile Include="Models\PerformaInvoice.cs" />
-    <Compile Include="Models\WeaponBase.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup />

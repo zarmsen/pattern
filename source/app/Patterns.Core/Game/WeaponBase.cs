@@ -1,4 +1,4 @@
-﻿namespace Patterns.Core.Models
+﻿namespace Patterns.Core.Game
 {
     public abstract class WeaponBase
     {
