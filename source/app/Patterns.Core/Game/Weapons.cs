@@ -13,6 +13,6 @@ namespace Patterns.Core.Game
 
         Axe = 4,
 
-        All = Gun & Sword & Axe
+        All = Gun | Sword | Axe
     }
 }
