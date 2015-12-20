@@ -6,6 +6,8 @@ namespace Patterns.Creational.AbstractFactory
     {
         WeaponBase CreateWeapon();
 
-        PlayerBase CreatePlayer();
+        PlayerBase CreateFighter();
+
+        PlayerBase CreateVictim();
     }
 }

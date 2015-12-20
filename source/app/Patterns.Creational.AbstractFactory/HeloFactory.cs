@@ -6,12 +6,17 @@ namespace Patterns.Creational.AbstractFactory
     {
         public WeaponBase CreateWeapon()
         {
-            return null;
+            return new Axe(1);
         }
 
-        public PlayerBase CreatePlayer()
+        public PlayerBase CreateFighter()
         {
-            return null;
+            return new King("Arthus");
+        }
+
+        public PlayerBase CreateVictim()
+        {
+            return new Farmer("John");
         }
     }
 }
