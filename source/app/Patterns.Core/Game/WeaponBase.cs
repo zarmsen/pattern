@@ -4,21 +4,21 @@ namespace Patterns.Core.Game
 {
     public abstract class WeaponBase : IEquatable<WeaponBase>
     {
-        public string Name { get;  private set; }
-
-        public int Effect { get; private set; }
-
         protected WeaponBase(string name, int effect)
         {
             Name = name;
             Effect = effect;
         }
 
+        public string Name { get; }
+
+        public int Effect { get; private set; }
+
         /// <summary>
-        /// Indicates whether the current object is equal to another object of the same type.
+        ///     Indicates whether the current object is equal to another object of the same type.
         /// </summary>
         /// <returns>
-        /// true if the current object is equal to the <paramref name="other"/> parameter; otherwise, false.
+        ///     true if the current object is equal to the <paramref name="other"/> parameter; otherwise, false.
         /// </returns>
         /// <param name="other">An object to compare with this object.</param>
         public bool Equals(WeaponBase other)
@@ -34,11 +34,16 @@ namespace Patterns.Core.Game
             return string.Equals(Name, other.Name);
         }
 
+        public HitResult Hit(PlayerBase player)
+        {
+            return new HitResult(player, this);
+        }
+
         /// <summary>
-        /// Determines whether the specified object is equal to the current object.
+        ///     Determines whether the specified object is equal to the current object.
         /// </summary>
         /// <returns>
-        /// true if the specified object  is equal to the current object; otherwise, false.
+        ///     true if the specified object  is equal to the current object; otherwise, false.
         /// </returns>
         /// <param name="obj">The object to compare with the current object. </param>
         public override bool Equals(object obj)
@@ -51,7 +56,7 @@ namespace Patterns.Core.Game
             {
                 return true;
             }
-            if (obj.GetType() != this.GetType())
+            if (obj.GetType() != GetType())
             {
                 return false;
             }
@@ -59,10 +64,10 @@ namespace Patterns.Core.Game
         }
 
         /// <summary>
-        /// Serves as the default hash function. 
+        ///     Serves as the default hash function.
         /// </summary>
         /// <returns>
-        /// A hash code for the current object.
+        ///     A hash code for the current object.
         /// </returns>
         public override int GetHashCode()
         {
@@ -70,10 +75,10 @@ namespace Patterns.Core.Game
         }
 
         /// <summary>
-        /// Returns a string that represents the current object.
+        ///     Returns a string that represents the current object.
         /// </summary>
         /// <returns>
-        /// A string that represents the current object.
+        ///     A string that represents the current object.
         /// </returns>
         public override string ToString()
         {
