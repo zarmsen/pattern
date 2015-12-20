@@ -2,7 +2,7 @@
 
 namespace Patterns.Creational.AbstractFactory
 {
-    public interface IGameFactory
+    internal interface IGameFactory
     {
         WeaponBase CreateWeapon();
 

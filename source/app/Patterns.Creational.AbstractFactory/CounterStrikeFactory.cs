@@ -2,7 +2,7 @@
 
 namespace Patterns.Creational.AbstractFactory
 {
-    public class CounterStrikeFactory : IGameFactory
+    internal class CounterStrikeFactory : IGameFactory
     {
         public WeaponBase CreateWeapon()
         {

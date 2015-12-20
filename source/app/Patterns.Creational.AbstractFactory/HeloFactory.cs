@@ -2,7 +2,7 @@
 
 namespace Patterns.Creational.AbstractFactory
 {
-    public class HeloFactory : IGameFactory
+    internal class HeloFactory : IGameFactory
     {
         public WeaponBase CreateWeapon()
         {
