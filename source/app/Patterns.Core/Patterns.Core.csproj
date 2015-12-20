@@ -48,6 +48,7 @@
     <Compile Include="Models\InvoiceType.cs" />
     <Compile Include="Models\PartialPaymentInvoice.cs" />
     <Compile Include="Models\PerformaInvoice.cs" />
+    <Compile Include="Models\WeaponBase.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup />
