@@ -43,9 +43,13 @@
     <Compile Include="DbConnection.cs" />
     <Compile Include="Enums\ConfigKey.cs" />
     <Compile Include="Game\Axe.cs" />
+    <Compile Include="Game\Farmer.cs" />
     <Compile Include="Game\Gun.cs" />
     <Compile Include="Game\HitResult.cs" />
+    <Compile Include="Game\King.cs" />
     <Compile Include="Game\PlayerBase.cs" />
+    <Compile Include="Game\Players.cs" />
+    <Compile Include="Game\Soldier.cs" />
     <Compile Include="Game\Sword.cs" />
     <Compile Include="Game\WeaponBase.cs" />
     <Compile Include="Game\Weapons.cs" />
