@@ -42,6 +42,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CounterStrikeFactory.cs" />
+    <Compile Include="GameController.cs" />
     <Compile Include="HeloFactory.cs" />
     <Compile Include="IGameFactory.cs" />
     <Compile Include="Program.cs" />
