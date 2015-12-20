@@ -42,6 +42,7 @@
   <ItemGroup>
     <Compile Include="DbConnection.cs" />
     <Compile Include="Enums\ConfigKey.cs" />
+    <Compile Include="Game\HitResult.cs" />
     <Compile Include="Game\PlayerBase.cs" />
     <Compile Include="Game\WeaponBase.cs" />
     <Compile Include="Models\DeliveryNote.cs" />

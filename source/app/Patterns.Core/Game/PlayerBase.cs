@@ -34,6 +34,13 @@ namespace Patterns.Core.Game
             return string.Equals(Name, other.Name);
         }
 
+        public void GetHit(HitResult result)
+        {
+            var newValue = Energy - result.Damage;
+            Energy = newValue;
+            Console.WriteLine($"Get hit from {result.NameOfWeapon}!!! {ToString()}");
+        }
+
         /// <summary>
         ///     Returns a string that represents the current object.
         /// </summary>
