@@ -69,6 +69,17 @@ namespace Patterns.Core.Game
             return (Name != null ? Name.GetHashCode() : 0);
         }
 
+        /// <summary>
+        /// Returns a string that represents the current object.
+        /// </summary>
+        /// <returns>
+        /// A string that represents the current object.
+        /// </returns>
+        public override string ToString()
+        {
+            return $"{Name}";
+        }
+
         public static bool operator ==(WeaponBase left, WeaponBase right)
         {
             return Equals(left, right);
