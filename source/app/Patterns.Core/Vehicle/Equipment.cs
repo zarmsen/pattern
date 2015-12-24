@@ -2,6 +2,7 @@
 
 namespace Patterns.Core.Vehicle
 {
+    [Serializable]
     public class Equipment : IEquatable<Equipment>
     {
         public Equipment(string name)
