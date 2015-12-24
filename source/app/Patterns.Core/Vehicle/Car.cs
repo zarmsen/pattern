@@ -1,7 +1,9 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 
 namespace Patterns.Core.Vehicle
 {
+    [Serializable]
     public class Car
     {
         public Car(string manufacturer)
