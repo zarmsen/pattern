@@ -61,6 +61,7 @@
     <Compile Include="Models\PerformaInvoice.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Vehicle\Car.cs" />
+    <Compile Include="Vehicle\Equipment.cs" />
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
