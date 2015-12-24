@@ -36,8 +36,8 @@ namespace Patterns.Core.Game
 
         public void GetHit(HitResult result)
         {
-            var newValue = Energy - result.Damage;
-            Energy = newValue;
+       
+            Energy = result.NewEnergyOfPlayer;
             Console.WriteLine($"Get hit from {result.NameOfWeapon}!!! {ToString()}");
         }
 
