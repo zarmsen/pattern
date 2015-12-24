@@ -42,6 +42,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="InstallationBuilder.cs" />
     <Compile Include="MaybachInstallation.cs" />
     <Compile Include="CarConfiguratorBase.cs" />
     <Compile Include="Program.cs" />
