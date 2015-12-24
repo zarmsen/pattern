@@ -1,4 +1,6 @@
-﻿using Patterns.Core.Vehicle;
+﻿using System;
+
+using Patterns.Core.Vehicle;
 
 namespace Patterns.Creational.Builder
 {
@@ -11,8 +13,19 @@ namespace Patterns.Creational.Builder
             _car = new Car(manufacturerName);
         }
 
-        public abstract void Build();
+        public void Build()
+        {
+            foreach (var equipment in _car.Equipments)
+            {
+                Console.WriteLine(equipment.Name + " "+ Installation());
+            }
+        }
 
-        public abstract void AddEquipment(Equipment equipment);
+        public void AddEquipment(Equipment equipment)
+        {
+            _car.Equipments.Add(equipment);
+        }
+
+        protected abstract string Installation();
     }
 }
