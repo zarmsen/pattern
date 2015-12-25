@@ -6,6 +6,10 @@ namespace Patterns.Structural.Adapter
     {
         private static void Main(string[] args)
         {
+
+            ILoggerAdapter logger = new MyLogger();
+
+            logger.Error("Hello World!");
             Console.ReadKey();
         }
     }
