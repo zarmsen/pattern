@@ -6,6 +6,11 @@ namespace Patterns.Structural.Bridge
     {
         private static void Main(string[] args)
         {
+
+            var message = new UserMessage(new Email());
+
+            message.Send("Hello World");
+
             Console.ReadKey();
         }
     }
