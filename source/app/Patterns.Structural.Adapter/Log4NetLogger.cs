@@ -1,10 +1,4 @@
-﻿// --------------------------------------------------------------------------------
-// Copyright © IcamSystems GmbH, 2015
-// Erstellt am: 25.12.2015 07:12
-// Autor: André Harms
-// --------------------------------------------------------------------------------
-
-using System;
+﻿using System;
 
 namespace Patterns.Structural.Adapter
 {
