@@ -6,7 +6,7 @@ namespace Patterns.Structural.Bridge
     {
         private readonly IMessageImplementation _implementation;
 
-        private MessageAbstraction(IMessageImplementation implementation)
+        protected MessageAbstraction(IMessageImplementation implementation)
         {
             _implementation = implementation;
         }
