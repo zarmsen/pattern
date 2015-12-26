@@ -15,13 +15,24 @@ namespace Patterns.Structural.Composite
 
         public abstract bool HasChildren();
 
+        /// <summary>
+        /// Returns a string that represents the current object.
+        /// </summary>
+        /// <returns>
+        /// A string that represents the current object.
+        /// </returns>
+        public override string ToString()
+        {
+            return $"{Id} - {Caption}";
+        }
+
         int Id { get; }
 
         string Caption { get; }
 
         public void Output()
         {
-            Console.WriteLine("{0} - {1}",Id, Caption);
+            Console.WriteLine(ToString());
         }
     }
 }
