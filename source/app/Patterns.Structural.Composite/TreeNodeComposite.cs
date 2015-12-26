@@ -2,16 +2,18 @@
 
 namespace Patterns.Structural.Composite
 {
-    internal class TreeNodeComposite
+    internal abstract class TreeNodeComposite
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="T:System.Object"/> class.
         /// </summary>
-        public TreeNodeComposite(int id, string caption)
+        protected TreeNodeComposite(int id, string caption)
         {
             Id = id;
             Caption = caption;
         }
+
+        public abstract bool HasChildren();
 
         int Id { get; }
 
