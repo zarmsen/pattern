@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace Patterns.Structural.Composite
 {
@@ -27,6 +28,12 @@ namespace Patterns.Structural.Composite
         {
             _treeNodes.Remove(node);
         }
+
+        public override bool HasChildren()
+        {
+            return _treeNodes.Any();
+        }
+
 
 
         /// <summary>
