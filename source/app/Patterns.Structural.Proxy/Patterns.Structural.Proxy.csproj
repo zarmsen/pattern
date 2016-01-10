@@ -43,6 +43,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="IMail.cs" />
+    <Compile Include="LogProxy.cs" />
     <Compile Include="Mail.cs" />
     <Compile Include="MailLogProxy.cs" />
     <Compile Include="Program.cs" />
