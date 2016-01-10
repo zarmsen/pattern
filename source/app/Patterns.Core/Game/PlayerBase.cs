@@ -34,7 +34,7 @@ namespace Patterns.Core.Game
             return string.Equals(Name, other.Name);
         }
 
-        public void GetHit(HitResult result)
+        public virtual void GetHit(HitResult result)
         {
        
             Energy = result.NewEnergyOfPlayer;
