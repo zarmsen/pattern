@@ -15,6 +15,7 @@ namespace Patterns.Structural.Decorator
         public sealed override void GetHit(HitResult result)
         {
             Player.GetHit(result);
+            Energy = Player.Energy;
         }
     }
 }

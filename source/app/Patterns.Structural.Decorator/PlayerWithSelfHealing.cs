@@ -10,6 +10,7 @@ namespace Patterns.Structural.Decorator
         public void SelfHealing()
         {
             Player.Energy = 100;
+            Energy = 100;
         }
     }
 }
