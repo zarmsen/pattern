@@ -4,17 +4,17 @@ namespace Patterns.Structural.Decorator
 {
     internal abstract class PlayerDecoratorAddOn : PlayerBase
     {
-        private readonly PlayerBase _player;
+        protected readonly PlayerBase Player;
 
         protected PlayerDecoratorAddOn(string name, PlayerBase player)
             : base(name)
         {
-            _player = player;
+            Player = player;
         }
 
         public sealed override void GetHit(HitResult result)
         {
-            _player.GetHit(result);
+            Player.GetHit(result);
         }
     }
 }
