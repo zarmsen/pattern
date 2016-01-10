@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Linq;
 
 namespace Patterns.Structural.Flyweight
 {
@@ -6,6 +7,13 @@ namespace Patterns.Structural.Flyweight
     {
         private static void Main(string[] args)
         {
+            var reader = new SimulateSoldierReader();
+
+            var soldiers = reader.Read();
+            
+            Console.WriteLine("Instances in List: {0}!",soldiers.Count());
+       
+
             Console.ReadKey();
         }
     }
