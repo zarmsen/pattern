@@ -14,6 +14,8 @@ namespace Patterns.Core.Game
 
         public int Energy { get; set; }
 
+        public WeaponBase Weapon { get; private set; }
+
         /// <summary>
         ///     Indicates whether the current object is equal to another object of the same type.
         /// </summary>
@@ -31,25 +33,53 @@ namespace Patterns.Core.Game
             {
                 return true;
             }
-            return string.Equals(Name, other.Name);
+            return string.Equals(Name, other.Name) && Equals(Weapon, other.Weapon);
         }
 
         public virtual void GetHit(HitResult result)
         {
-       
             Energy = result.NewEnergyOfPlayer;
             Console.WriteLine($"Get hit from {result.NameOfWeapon}!!! {ToString()}");
         }
 
-        /// <summary>
-        ///     Returns a string that represents the current object.
-        /// </summary>
-        /// <returns>
-        ///     A string that represents the current object.
-        /// </returns>
-        public override string ToString()
+        public virtual void Hit(PlayerBase player)
         {
-            return $"{Name} with energy of {Energy} %";
+            if (Weapon != null)
+            {
+                player.Energy = player.Energy - Weapon.Effect;
+            }
+        }
+
+        public void SetWeapon(Weapons weapons)
+        {
+            switch (weapons)
+            {
+                case Weapons.Axe:
+                {
+                    Weapon = new Axe();
+                    break;
+                }
+                case Weapons.Gun:
+                {
+                    Weapon = new Gun();
+                    break;
+                }
+                case Weapons.Sword:
+                {
+                    Weapon = new Sword();
+                    break;
+                }
+                case Weapons.None:
+                {
+                    Weapon = null;
+                    break;
+                }
+
+                case Weapons.All:
+                {
+                    throw new InvalidOperationException("A player have only one weapon!!!");
+                }
+            }
         }
 
         /// <summary>
@@ -84,7 +114,12 @@ namespace Patterns.Core.Game
         /// </returns>
         public override int GetHashCode()
         {
-            return (Name != null ? Name.GetHashCode() : 0);
+            unchecked
+            {
+                var hashCode = (Name != null ? Name.GetHashCode() : 0);
+                hashCode = (hashCode * 397) ^ (Weapon != null ? Weapon.GetHashCode() : 0);
+                return hashCode;
+            }
         }
 
         public static bool operator ==(PlayerBase left, PlayerBase right)
@@ -95,6 +130,17 @@ namespace Patterns.Core.Game
         public static bool operator !=(PlayerBase left, PlayerBase right)
         {
             return !Equals(left, right);
+        }
+
+        /// <summary>
+        ///     Returns a string that represents the current object.
+        /// </summary>
+        /// <returns>
+        ///     A string that represents the current object.
+        /// </returns>
+        public override string ToString()
+        {
+            return Weapon == null ? $"{Name}  with energy of {Energy} %" : $"{Name} - {Weapon} with energy of {Energy} %";
         }
     }
 }
