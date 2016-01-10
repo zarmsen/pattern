@@ -6,6 +6,10 @@ namespace Patterns.Structural.Proxy
     {
         private static void Main(string[] args)
         {
+            var proxy = new MailLogProxy();
+
+            proxy.Send();
+
             Console.ReadKey();
         }
     }
