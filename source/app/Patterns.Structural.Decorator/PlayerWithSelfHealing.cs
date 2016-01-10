@@ -4,8 +4,8 @@ namespace Patterns.Structural.Decorator
 {
     internal class PlayerWithSelfHealing : PlayerDecoratorAddOn
     {
-        public PlayerWithSelfHealing(string name, PlayerBase player)
-            : base(name, player) {}
+        public PlayerWithSelfHealing(PlayerBase player)
+            : base(player.Name, player) {}
 
         public void SelfHealing()
         {
