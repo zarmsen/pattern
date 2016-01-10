@@ -1,15 +1,15 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Patterns.Structural.Facade
 {
-    class Program
+    internal class Program
     {
-        static void Main(string[] args)
+        private static void Main(string[] args)
         {
+            var system = new OurSystemFacade();
+
+            system.Read(1);
+            system.Read(2);
 
             Console.ReadKey();
         }
