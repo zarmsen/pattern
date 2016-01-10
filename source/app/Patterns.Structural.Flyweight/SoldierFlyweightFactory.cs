@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 
 using Patterns.Core.Game;
 
@@ -7,7 +8,7 @@ namespace Patterns.Structural.Flyweight
     internal class SoldierFlyweightFactory
     {
 
-        private Dictionary<Weapons, Soldier> _cache = new Dictionary<Weapons, Soldier>();
+        private readonly Dictionary<Weapons, Soldier> _cache = new Dictionary<Weapons, Soldier>();
 
         public int CountOfObjects => _cache.Count;
 
@@ -16,8 +17,12 @@ namespace Patterns.Structural.Flyweight
             var isAvailable = _cache.ContainsKey(weapon);
             if (isAvailable)
             {
+
+                Console.WriteLine("Read Cache!");
                 return _cache[weapon];
             }
+
+            Console.WriteLine("Create Soldier with weapon '{0}'", weapon);
 
             var soldier = new Soldier("Soldier");
             soldier.SetWeapon(weapon);
