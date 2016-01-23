@@ -43,6 +43,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="GameClient.cs" />
     <Compile Include="GameCommandBase.cs" />
     <Compile Include="MoveConcreteCommand.cs" />
     <Compile Include="PlayingFieldInvoker.cs" />
