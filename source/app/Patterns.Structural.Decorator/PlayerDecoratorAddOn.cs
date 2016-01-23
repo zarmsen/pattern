@@ -7,7 +7,7 @@ namespace Patterns.Structural.Decorator
         protected readonly PlayerBase Player;
 
         protected PlayerDecoratorAddOn(string name, PlayerBase player)
-            : base(name)
+            : base(name, new Position(2, 4))
         {
             Player = player;
         }
