@@ -28,7 +28,7 @@ namespace Patterns.Behavioral.Command
             if (_oldPosition != null)
             {
                 Player.Move(_oldPosition);
-                Console.WriteLine("UNDO: player {1} to position '{0}'", _position, Player.Name);
+                Console.WriteLine("UNDO: Player {1} from old position '{2}' to new position '{0}'", _oldPosition, Player.Name, _position);
             }
         }
     }
