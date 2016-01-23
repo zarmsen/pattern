@@ -49,6 +49,7 @@
     <Compile Include="Game\King.cs" />
     <Compile Include="Game\PlayerBase.cs" />
     <Compile Include="Game\Players.cs" />
+    <Compile Include="Game\Position.cs" />
     <Compile Include="Game\Soldier.cs" />
     <Compile Include="Game\Sword.cs" />
     <Compile Include="Game\WeaponBase.cs" />
