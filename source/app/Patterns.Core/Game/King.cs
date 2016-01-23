@@ -2,7 +2,7 @@ namespace Patterns.Core.Game
 {
     public class King : PlayerBase
     {
-        public King(string name)
-            : base($"King {name}") {}
+        public King(string name, Position sartPosition)
+            : base($"King {name}", sartPosition) {}
     }
 }

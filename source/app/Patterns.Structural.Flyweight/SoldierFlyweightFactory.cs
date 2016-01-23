@@ -24,7 +24,7 @@ namespace Patterns.Structural.Flyweight
 
             Console.WriteLine("Create Soldier with weapon '{0}'", weapon);
 
-            var soldier = new Soldier("Soldier");
+            var soldier = new Soldier("Soldier", new Position(2, 4));
             soldier.SetWeapon(weapon);
             _cache.Add(weapon, soldier);
             return soldier;

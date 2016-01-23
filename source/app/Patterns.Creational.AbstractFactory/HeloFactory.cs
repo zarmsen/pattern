@@ -11,12 +11,12 @@ namespace Patterns.Creational.AbstractFactory
 
         public PlayerBase CreateFighter()
         {
-            return new King("Arthus");
+            return new King("Arthus", new Position(2, 4));
         }
 
         public PlayerBase CreateVictim()
         {
-            return new Farmer("John");
+            return new Farmer("John", new Position(3, 4));
         }
     }
 }
