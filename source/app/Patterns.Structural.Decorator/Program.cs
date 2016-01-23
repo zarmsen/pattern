@@ -8,11 +8,11 @@ namespace Patterns.Structural.Decorator
     {
         private static void Main(string[] args)
         {
-            var godPlayer = new PlayerWithSelfHealing(new King("Arthur"));
+            var godPlayer = new PlayerWithSelfHealing(new King("Arthur", new Position(2, 4)));
 
             Status(godPlayer);
 
-            godPlayer.GetHit(new HitResult(new Farmer("Farmer"), new Axe(3)));
+            godPlayer.GetHit(new HitResult(new Farmer("Farmer", new Position(4, 4)), new Axe(3)));
 
             Status(godPlayer);
 

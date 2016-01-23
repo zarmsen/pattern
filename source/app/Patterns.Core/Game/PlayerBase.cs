@@ -2,15 +2,18 @@
 
 namespace Patterns.Core.Game
 {
-    public class PlayerBase : IEquatable<PlayerBase>
+    public abstract class PlayerBase : IEquatable<PlayerBase>
     {
-        public PlayerBase(string name)
+        protected PlayerBase(string name, Position sartPosition)
         {
             Energy = 100;
             Name = name;
+            CurrentPosition = sartPosition;
         }
 
         public string Name { get; }
+
+        public Position CurrentPosition { get; private set; }
 
         public int Energy { get; set; }
 
@@ -34,6 +37,11 @@ namespace Patterns.Core.Game
                 return true;
             }
             return string.Equals(Name, other.Name) && Equals(Weapon, other.Weapon);
+        }
+
+        public void Move(Position move)
+        {
+            CurrentPosition = move;
         }
 
         public virtual void GetHit(HitResult result)
@@ -140,7 +148,9 @@ namespace Patterns.Core.Game
         /// </returns>
         public override string ToString()
         {
-            return Weapon == null ? $"{Name}  with energy of {Energy} %" : $"{Name} - {Weapon} with energy of {Energy} %";
+            return Weapon == null
+                ? $"{Name} on Position '{CurrentPosition}' with energy of {Energy} %"
+                : $"{Name} - {Weapon} with energy of {Energy} %";
         }
     }
 }
