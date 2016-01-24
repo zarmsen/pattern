@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Globalization;
 
 namespace Patterns.Behavioral.Interpreter
 {
@@ -14,7 +15,9 @@ namespace Patterns.Behavioral.Interpreter
                 var isDigit = Char.IsDigit(value);
                 if (isDigit)
                 {
-                    var figureExpression = new FigureExpression(value);
+                    int figure;
+                    Int32.TryParse(value.ToString(), out figure);
+                    var figureExpression = new FigureExpression(figure);
                     list.Add(figureExpression.Interpret(context));
 
                 }
