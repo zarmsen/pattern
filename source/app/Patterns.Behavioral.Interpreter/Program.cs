@@ -6,9 +6,17 @@ namespace Patterns.Behavioral.Interpreter
     {
         static void Main(string[] args)
         {
-            var input = Console.ReadLine();
+            var interpreter = new StringExpression();
 
-            Console.WriteLine(input);
+
+            var input = Console.ReadLine();
+        
+            var context = new Context(input);
+
+            interpreter.Interpret(context);
+
+            
+            Console.WriteLine(context.Output);
 
 
             Console.ReadKey();
