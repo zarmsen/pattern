@@ -43,6 +43,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Patterns.Behavioral.Chainof
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Patterns.Behavioral.Command", "source\app\Patterns.Behavioral.Command\Patterns.Behavioral.Command.csproj", "{2D9116DF-0FB5-412E-A5C6-65E38A5AF5F2}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Patterns.Behavioral.Interceptor", "source\app\Patterns.Behavioral.Interceptor\Patterns.Behavioral.Interceptor.csproj", "{EF868CE9-FD71-40AD-AB52-D27D6A0E71E0}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -113,6 +115,10 @@ Global
 		{2D9116DF-0FB5-412E-A5C6-65E38A5AF5F2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2D9116DF-0FB5-412E-A5C6-65E38A5AF5F2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2D9116DF-0FB5-412E-A5C6-65E38A5AF5F2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EF868CE9-FD71-40AD-AB52-D27D6A0E71E0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EF868CE9-FD71-40AD-AB52-D27D6A0E71E0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EF868CE9-FD71-40AD-AB52-D27D6A0E71E0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EF868CE9-FD71-40AD-AB52-D27D6A0E71E0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -134,5 +140,6 @@ Global
 		{26D6DBAA-6F86-4B2A-9E2B-0F8CD1555780} = {B578914B-F195-422A-8C33-F11C3C4D2576}
 		{923CE155-4651-4F82-A217-734973B253D2} = {33908AAE-FDED-4C06-8476-E1204D098B21}
 		{2D9116DF-0FB5-412E-A5C6-65E38A5AF5F2} = {33908AAE-FDED-4C06-8476-E1204D098B21}
+		{EF868CE9-FD71-40AD-AB52-D27D6A0E71E0} = {33908AAE-FDED-4C06-8476-E1204D098B21}
 	EndGlobalSection
 EndGlobal
