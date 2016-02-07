@@ -2,7 +2,7 @@
 
 namespace Patterns.Behavioral.Iterator
 {
-    internal class GameIterator : IGameIterator
+    internal sealed class GameIterator : IGameIterator
     {
         private readonly GameCollection _collection;
 

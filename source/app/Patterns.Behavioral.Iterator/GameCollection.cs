@@ -4,7 +4,7 @@ using Patterns.Core.Game;
 
 namespace Patterns.Behavioral.Iterator
 {
-    internal class GameCollection : IGameCollection
+    internal sealed class GameCollection : IGameCollection
     {
         private readonly Dictionary<int, PlayerBase> _items = new Dictionary<int, PlayerBase>();
 
