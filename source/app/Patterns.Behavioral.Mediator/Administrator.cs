@@ -9,7 +9,7 @@ namespace Patterns.Behavioral.Mediator
 
         public override void Receive(Colleague @from, string message)
         {
-            Console.WriteLine("Admin {0} says to {1}: '{2}'", @from, Name, message);
+            Console.WriteLine("{0} says to {1}: '{2}'", @from, Name, message);
         }
     }
 }

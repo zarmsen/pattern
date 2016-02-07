@@ -11,9 +11,9 @@ namespace Patterns.Behavioral.Mediator
 
         public Mediator ChatRoom { get; set; }
 
-        public void Send(string message, Colleague colleague)
+        public void Send(string message, Colleague to)
         {
-            ChatRoom?.Send(message, colleague);
+            ChatRoom?.Send(message, this, to);
         }
 
         public virtual void Receive(Colleague from, string message)

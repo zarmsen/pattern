@@ -43,6 +43,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Administrator.cs" />
+    <Compile Include="ChatRoom.cs" />
     <Compile Include="Colleague.cs" />
     <Compile Include="Mediator.cs" />
     <Compile Include="Participant.cs" />

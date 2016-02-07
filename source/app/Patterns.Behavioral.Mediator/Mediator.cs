@@ -4,6 +4,6 @@
     {
         public abstract void Register(Colleague colleague);
 
-        public abstract void Send(string message, Colleague colleague);
+        public abstract void Send(string message, Colleague @from, Colleague to);
     }
 }
